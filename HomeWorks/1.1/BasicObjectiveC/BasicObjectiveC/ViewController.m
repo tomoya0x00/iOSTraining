@@ -19,8 +19,8 @@
     [super viewDidLoad];
 
     // TODO ここに課題を書き進めていってください
-
-
+    NSString *string = [NSString stringWithFormat:@"%d + %d = %d", 1, 2, 3];
+    NSLog(@"%@", string);
 }
 
 - (void)didReceiveMemoryWarning
