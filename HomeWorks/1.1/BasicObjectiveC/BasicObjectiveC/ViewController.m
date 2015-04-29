@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DomainEntity.h"
 
 @interface ViewController ()
 
@@ -19,8 +20,24 @@
     [super viewDidLoad];
 
     // TODO ここに課題を書き進めていってください
-    NSString *string = [NSString stringWithFormat:@"%d + %d = %d", 1, 2, 3];
-    NSLog(@"%@", string);
+    NSMutableArray *array = [NSMutableArray array];
+
+    DomainEntity *entity1 = [[DomainEntity alloc] init];
+    entity1.domain = @"mixi.jp";
+    entity1.entry = @[@"list_voice.pl", @"list_diary.pl", @"list_mymall_item.pl"];
+    [array addObject:entity1];
+
+    DomainEntity *entity2 = [[DomainEntity alloc] init];
+    entity2.domain = @"mmall.jp";
+    DomainEntityEntry *entry = [[DomainEntityEntry alloc] init];
+    entry.path = @"add_diary.pl";
+    entry.query = @{ @"tag_id" : @7};
+    entity2.entry = @[entry];
+    [array addObject:entity2];
+
+    DomainEntity *entity3 = [[DomainEntity alloc] init];
+    entity3.domain = @"itunes.apple.com";
+    [array addObject:entity3];
 }
 
 - (void)didReceiveMemoryWarning
