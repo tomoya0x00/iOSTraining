@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "DomainEntity.h"
+#import "TestQueue.h"
+#import "TestStack.h"
 
 @interface ViewController ()
 
@@ -38,6 +40,24 @@
     DomainEntity *entity3 = [[DomainEntity alloc] init];
     entity3.domain = @"itunes.apple.com";
     [array addObject:entity3];
+    
+    TestQueue *queue = [[TestQueue alloc] init];
+    
+    [queue push:@"0"];
+    [queue push:@"1"];
+    [queue push:@"2"];
+    
+    NSLog(@"queue.size:%ld", (long)[queue size]);
+    NSLog(@"queue.pop:%@, %@, %@", [queue pop], [queue pop], [queue pop]);
+    
+    TestStack *stack = [[TestStack alloc] init];
+    
+    [stack push:@"0"];
+    [stack push:@"1"];
+    [stack push:@"2"];
+    
+    NSLog(@"stack.size:%ld", (long)[stack size]);
+    NSLog(@"stack.pop:%@, %@, %@", [stack pop], [stack pop], [stack pop]);
 }
 
 - (void)didReceiveMemoryWarning

@@ -19,6 +19,8 @@
 		5405EF1C171D454500C6E9F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5405EF1B171D454500C6E9F5 /* ViewController.m */; };
 		5405EF1F171D454500C6E9F5 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5405EF1D171D454500C6E9F5 /* ViewController.xib */; };
 		6CAE3B891AEFCD2600F33A52 /* DomainEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE3B881AEFCD2600F33A52 /* DomainEntity.m */; };
+		6CAE3B8C1AF1119C00F33A52 /* TestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE3B8B1AF1119C00F33A52 /* TestQueue.m */; };
+		6CAE3B8F1AF118FE00F33A52 /* TestStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE3B8E1AF118FE00F33A52 /* TestStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		5405EF1E171D454500C6E9F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		6CAE3B871AEFCD2600F33A52 /* DomainEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DomainEntity.h; sourceTree = "<group>"; };
 		6CAE3B881AEFCD2600F33A52 /* DomainEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomainEntity.m; sourceTree = "<group>"; };
+		6CAE3B8A1AF1119C00F33A52 /* TestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestQueue.h; sourceTree = "<group>"; };
+		6CAE3B8B1AF1119C00F33A52 /* TestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestQueue.m; sourceTree = "<group>"; };
+		6CAE3B8D1AF118FE00F33A52 /* TestStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStack.h; sourceTree = "<group>"; };
+		6CAE3B8E1AF118FE00F33A52 /* TestStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,10 @@
 				5405EF09171D454500C6E9F5 /* Supporting Files */,
 				6CAE3B871AEFCD2600F33A52 /* DomainEntity.h */,
 				6CAE3B881AEFCD2600F33A52 /* DomainEntity.m */,
+				6CAE3B8A1AF1119C00F33A52 /* TestQueue.h */,
+				6CAE3B8B1AF1119C00F33A52 /* TestQueue.m */,
+				6CAE3B8D1AF118FE00F33A52 /* TestStack.h */,
+				6CAE3B8E1AF118FE00F33A52 /* TestStack.m */,
 			);
 			path = BasicObjectiveC;
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5405EF0F171D454500C6E9F5 /* main.m in Sources */,
+				6CAE3B8C1AF1119C00F33A52 /* TestQueue.m in Sources */,
+				6CAE3B8F1AF118FE00F33A52 /* TestStack.m in Sources */,
 				5405EF13171D454500C6E9F5 /* AppDelegate.m in Sources */,
 				6CAE3B891AEFCD2600F33A52 /* DomainEntity.m in Sources */,
 				5405EF1C171D454500C6E9F5 /* ViewController.m in Sources */,
