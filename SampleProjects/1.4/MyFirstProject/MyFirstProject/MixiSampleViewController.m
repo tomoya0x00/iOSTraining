@@ -71,7 +71,11 @@
     if ([segue.identifier isEqualToString:@"presentMySecondViewController"]) {
         UIViewController *destination = segue.destinationViewController;
     }
-
+    
+    if ([segue.identifier isEqualToString:@"presentMyThirdViewController"]) {
+        MyThirdViewController *destination = segue.destinationViewController;
+        destination.delegate = self;
+    }
 }
 
 - (IBAction)unwindToSampleViewController:(UIStoryboardSegue *)segue

@@ -178,7 +178,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonTapped:" destination="e0A-SK-YCY" eventType="touchUpInside" id="bgp-Mm-u80"/>
-                                    <segue destination="XXT-HF-yvq" kind="unwind" unwindAction="unwindToSampleViewController:" id="Gks-52-d20"/>
                                 </connections>
                             </button>
                         </subviews>
