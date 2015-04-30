@@ -16,6 +16,7 @@
 		54D749231A68BF3000FAB5E0 /* MyFirstProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D749221A68BF3000FAB5E0 /* MyFirstProjectTests.m */; };
 		54D7492E1A68C15700FAB5E0 /* MixiSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7492D1A68C15700FAB5E0 /* MixiSampleViewController.m */; };
 		54D749311A6A53F100FAB5E0 /* MySecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D749301A6A53F100FAB5E0 /* MySecondViewController.m */; };
+		6C9C66891AF2066700E70F4C /* MyThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C66881AF2066700E70F4C /* MyThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		54D7492D1A68C15700FAB5E0 /* MixiSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixiSampleViewController.m; sourceTree = "<group>"; };
 		54D7492F1A6A53F100FAB5E0 /* MySecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySecondViewController.h; sourceTree = "<group>"; };
 		54D749301A6A53F100FAB5E0 /* MySecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySecondViewController.m; sourceTree = "<group>"; };
+		6C9C66871AF2066700E70F4C /* MyThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyThirdViewController.h; sourceTree = "<group>"; };
+		6C9C66881AF2066700E70F4C /* MyThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				54D7492D1A68C15700FAB5E0 /* MixiSampleViewController.m */,
 				54D7492F1A6A53F100FAB5E0 /* MySecondViewController.h */,
 				54D749301A6A53F100FAB5E0 /* MySecondViewController.m */,
+				6C9C66871AF2066700E70F4C /* MyThirdViewController.h */,
+				6C9C66881AF2066700E70F4C /* MyThirdViewController.m */,
 				54D749131A68BF3000FAB5E0 /* Images.xcassets */,
 				54D749151A68BF3000FAB5E0 /* LaunchScreen.xib */,
 				54D749061A68BF3000FAB5E0 /* Supporting Files */,
@@ -233,6 +238,7 @@
 				54D7492E1A68C15700FAB5E0 /* MixiSampleViewController.m in Sources */,
 				54D749311A6A53F100FAB5E0 /* MySecondViewController.m in Sources */,
 				54D7490C1A68BF3000FAB5E0 /* AppDelegate.m in Sources */,
+				6C9C66891AF2066700E70F4C /* MyThirdViewController.m in Sources */,
 				54D749091A68BF3000FAB5E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

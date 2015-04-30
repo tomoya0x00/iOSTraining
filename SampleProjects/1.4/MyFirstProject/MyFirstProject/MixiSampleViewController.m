@@ -8,6 +8,7 @@
 
 #import "MixiSampleViewController.h"
 #import "MySecondViewController.h"
+#import "MyThirdViewController.h"
 
 @interface MixiSampleViewController ()
 
@@ -33,14 +34,29 @@
 - (IBAction)secondButtonTapped:(id)sender {
 
     // segue経由でMySecondViewControllerを設定するときはこのコメントアウトを外す
-    // [self performSegueWithIdentifier:@"presentMySecondViewController" sender:self];
+    //[self performSegueWithIdentifier:@"presentMySecondViewController" sender:self];
 
     MySecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MySecondViewController"];
     secondViewController.delegate = self;
     [self presentViewController:secondViewController animated:YES completion:nil];
 }
 
+- (IBAction)thirdButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:@"presentMyThirdViewController" sender:self];
+}
+
+- (IBAction)fourthButtonTapped:(id)sender {
+    MyThirdViewController * thridViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyThirdViewController"];
+    thridViewController.delegate = self;
+    [self presentViewController:thridViewController animated:YES completion:nil];
+}
+
 - (void)secondViewControllerButtonTapped
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)thirdViewControllerButtonTapped
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
