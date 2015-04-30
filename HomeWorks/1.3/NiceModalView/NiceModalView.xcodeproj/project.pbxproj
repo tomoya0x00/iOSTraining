@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C9C668B1AF24E4300E70F4C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9C668A1AF24E4300E70F4C /* QuartzCore.framework */; };
 		DAC572A5171D05E600E434A0 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAC572A0171D05E600E434A0 /* 0.jpg */; };
 		DAC572A6171D05E600E434A0 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAC572A1171D05E600E434A0 /* 1.jpg */; };
 		DAC572A7171D05E600E434A0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAC572A2171D05E600E434A0 /* 2.jpg */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C9C668A1AF24E4300E70F4C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DAC572A0171D05E600E434A0 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		DAC572A1171D05E600E434A0 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		DAC572A2171D05E600E434A0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9C668B1AF24E4300E70F4C /* QuartzCore.framework in Frameworks */,
 				DAD37290171C3B0F00DF0A95 /* UIKit.framework in Frameworks */,
 				DAD37292171C3B0F00DF0A95 /* Foundation.framework in Frameworks */,
 				DAD37294171C3B0F00DF0A95 /* CoreGraphics.framework in Frameworks */,
@@ -118,6 +121,7 @@
 		DAD3728E171C3B0F00DF0A95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C9C668A1AF24E4300E70F4C /* QuartzCore.framework */,
 				DAD3728F171C3B0F00DF0A95 /* UIKit.framework */,
 				DAD37291171C3B0F00DF0A95 /* Foundation.framework */,
 				DAD37293171C3B0F00DF0A95 /* CoreGraphics.framework */,
@@ -192,6 +196,11 @@
 				CLASSPREFIX = Mixi;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "鄭 基旭";
+				TargetAttributes = {
+					DAD3728B171C3B0F00DF0A95 = {
+						DevelopmentTeam = TF47AG69DW;
+					};
+				};
 			};
 			buildConfigurationList = DAD37287171C3B0F00DF0A95 /* Build configuration list for PBXProject "NiceModalView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -319,10 +328,13 @@
 		DAD372AA171C3B0F00DF0A95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NiceModalView/NiceModalView-Prefix.pch";
 				INFOPLIST_FILE = "NiceModalView/NiceModalView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -330,10 +342,13 @@
 		DAD372AB171C3B0F00DF0A95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NiceModalView/NiceModalView-Prefix.pch";
 				INFOPLIST_FILE = "NiceModalView/NiceModalView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

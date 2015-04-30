@@ -7,6 +7,7 @@
 //
 
 #import "MixiNiceViewController.h"
+#import "UIViewController+NiceAnimation.h"
 
 @interface MixiNiceViewController()
 
@@ -47,8 +48,6 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[sampleImages objectAtIndex:index%allImageCount]];
     // insertSubview と addSubViewの違いを探してみましょう
 	[self.view insertSubview:imageView atIndex:0];
-
-// TODO: XIB上にある二つの各ボタンのTouchUpInsideイベントに　clickModalView：　と　clickPush:　を連結しましょう
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,28 +58,25 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-// TODO : UIViewController+NiceAnimation にある関数を使って、いい感じの遷移になるようにしましょう
+    [self animationPopFront];
 }
 
 - (IBAction)clickPush:(id)sender
 {
 	MixiNiceViewController *viewController = [[MixiNiceViewController alloc] init];
-// TODO :　hint-> pushViewController: animation:
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (IBAction)clickModalView:(id)sender
 {
 	MixiNiceViewController *viewController = [[MixiNiceViewController alloc] init];
-
-// TODO :　hint-> presentViewController: animation:
-
-
-// TODO : UIViewController+NiceAnimation にある関数を使って、いい感じの遷移になるようにしましょう
+    [self presentViewController:viewController animated:YES completion:nil];
+    [self animationPushBack];
 }
 
 - (void)clickClose:(id)sender
 {
-// TODO : hint-> dismissViewControllerAnimated:
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
