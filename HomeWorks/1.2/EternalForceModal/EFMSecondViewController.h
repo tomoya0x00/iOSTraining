@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-// TODO
-// delegateのためのプロトコルを定義
 @protocol EMFSecondViewControllerDelegate <NSObject>
-
-// ここにDelegateメソッドの定義
-
+- (void)sedondViewControllerButtonTapped;
 @end
 
 

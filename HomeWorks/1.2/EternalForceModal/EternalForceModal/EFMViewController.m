@@ -7,6 +7,7 @@
 //
 
 #import "EFMViewController.h"
+#import "EFMSecondViewController.h"
 
 @interface EFMViewController ()
 
@@ -27,16 +28,20 @@
 }
 
 - (IBAction)buttonTapped:(id)sender {
+    [self presentSecondViewController];
+}
 
+- (void)presentSecondViewController {
     EFMSecondViewController *secondViewController = [[EFMSecondViewController alloc] initWithNibName:@"EFMSecondViewController" bundle:nil];
-    // TODO secondViewControllerのdelegateを自分にセット
-    // TODO [self presentViewController:￼ animated:￼ completion:￼] を呼ぶ
-
+    secondViewController.delegate = self;
+    [self presentViewController:secondViewController animated:YES completion:nil];
 }
 
 #pragma EMFSecondViewController delegate
-// TODO EFMSecondViewController の delegateメソッドを実装
 
-
+- (void)sedondViewControllerButtonTapped
+{
+    [self dismissViewControllerAnimated:YES completion:^{[self presentSecondViewController];}];
+}
 
 @end
