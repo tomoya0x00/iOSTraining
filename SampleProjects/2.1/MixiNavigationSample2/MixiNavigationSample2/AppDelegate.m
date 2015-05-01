@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
     return YES;
 }
 
