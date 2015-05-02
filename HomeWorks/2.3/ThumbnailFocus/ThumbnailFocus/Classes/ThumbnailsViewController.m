@@ -11,6 +11,7 @@
 @interface ThumbnailsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) FocusManager *focusManager;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageViews;
 @end
 
 @implementation ThumbnailsViewController
@@ -21,6 +22,15 @@
 
     self.focusManager = [[FocusManager alloc] init];
     self.focusManager.delegate = self;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [self.imageViews enumerateObjectsUsingBlock:^(UIImageView *imageView, NSUInteger idx, BOOL *stop) {
+            [self.focusManager installOnView:imageView];
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", idx + 1]];
+            imageView.image = image;
+            imageView.tag = idx + 1 ;
+        }];
+    }
 }
 
 - (NSUInteger)supportedInterfaceOrientations

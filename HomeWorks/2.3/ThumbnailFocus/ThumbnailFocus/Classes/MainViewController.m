@@ -20,20 +20,26 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.thumbnailsViewController = [[ThumbnailsViewController alloc] initWithNibName:nil bundle:nil];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self.thumbnailsViewController = [[ThumbnailsViewController alloc] initWithNibName:@"ThumbnailsViewController~ipad" bundle:nil];
+    } else {
+        self.thumbnailsViewController = [[ThumbnailsViewController alloc] initWithNibName:@"ThumbnailsViewController" bundle:nil];        
+    }
     [self addChildViewController:self.thumbnailsViewController];
     [self.contentView addSubview:self.thumbnailsViewController.view];
     self.thumbnailsViewController.view.frame = self.contentView.bounds;
     self.view.clipsToBounds = NO;
 }
 
-#warning ⬇ HomeWork　iPadの場合は回転に対応してください。
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAll;
+    } else {
+        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+    }
 }
 
-#warning ⬇ HomeWork
 /*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 // １。５０ラインからのメソッドはコメント処理したのに、なんでうまく動いているか？ 考えてみてください。
 // ２。下記は必ず覚えていきましょう

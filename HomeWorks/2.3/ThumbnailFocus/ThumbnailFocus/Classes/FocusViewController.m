@@ -28,26 +28,26 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    // ⬇Answer：
+    // 画面回転時の通知登録
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(orientationDidChangeNotification:)
                                                  name:UIDeviceOrientationDidChangeNotification object:nil];
-    // ⬇Answer：    
+    // 画面回転時の通知開始
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    // ⬇Answer：
+    // 画面回転時の通知登録解除
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-    // ⬇Answer：
+    // 画面回転時の通知停止
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    // ⬇Answer：    
+    // 縦画面のみサポート
     return UIInterfaceOrientationMaskPortrait;
 }
 
@@ -79,9 +79,11 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
     CGAffineTransform transform;
     NSTimeInterval duration = kDefaultOrientationAnimationDuration;
 
+    // 前回と同じ画面回転方向であれば終了
     if([UIDevice currentDevice].orientation == self.previousOrientation)
         return;
 
+    // 前回と今回の画面回転が180度回転かどうか判断
     if((UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation) && UIInterfaceOrientationIsLandscape(self.previousOrientation))
        || (UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation) && UIInterfaceOrientationIsPortrait(self.previousOrientation)))
     {
@@ -141,7 +143,7 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
 }
 
 #pragma mark - Notifications
-// ⬇Answer：こちはいつ呼ばれますか？
+// 画面回転時に実行
 - (void)orientationDidChangeNotification:(NSNotification *)notification
 {
     [self updateOrientationAnimated:YES];

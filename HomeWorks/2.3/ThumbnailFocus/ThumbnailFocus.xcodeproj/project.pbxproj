@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C9C66C21AF4DF0000E70F4C /* ThumbnailsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9C66C11AF4DF0000E70F4C /* ThumbnailsViewController~ipad.xib */; };
 		DA28B781171FA45700B1D982 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA28B780171FA45700B1D982 /* UIKit.framework */; };
 		DA28B783171FA45700B1D982 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA28B782171FA45700B1D982 /* Foundation.framework */; };
 		DA28B785171FA45700B1D982 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA28B784171FA45700B1D982 /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C9C66C11AF4DF0000E70F4C /* ThumbnailsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ThumbnailsViewController~ipad.xib"; sourceTree = "<group>"; };
 		DA28B77D171FA45700B1D982 /* ThumbnailFocus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbnailFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA28B780171FA45700B1D982 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA28B782171FA45700B1D982 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,6 +153,7 @@
 				DA28B7B4171FAD6200B1D982 /* ThumbnailsViewController.h */,
 				DA28B7B5171FAD6200B1D982 /* ThumbnailsViewController.m */,
 				DA28B7B6171FAD6200B1D982 /* ThumbnailsViewController.xib */,
+				6C9C66C11AF4DF0000E70F4C /* ThumbnailsViewController~ipad.xib */,
 				DA28B7BD171FB17D00B1D982 /* FocusViewController.h */,
 				DA28B7BE171FB17D00B1D982 /* FocusViewController.m */,
 				DA28B7BF171FB17D00B1D982 /* FocusViewController.xib */,
@@ -221,6 +224,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "鄭 基旭";
+				TargetAttributes = {
+					DA28B77C171FA45700B1D982 = {
+						DevelopmentTeam = TF47AG69DW;
+					};
+				};
 			};
 			buildConfigurationList = DA28B778171FA45700B1D982 /* Build configuration list for PBXProject "ThumbnailFocus" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -253,6 +261,7 @@
 				DA28B7C1171FB17D00B1D982 /* FocusViewController.xib in Resources */,
 				DA28B7CD171FCA4000B1D982 /* 1f.jpg in Resources */,
 				DA28B7CE171FCA4000B1D982 /* 2f.jpg in Resources */,
+				6C9C66C21AF4DF0000E70F4C /* ThumbnailsViewController~ipad.xib in Resources */,
 				DA28B7CF171FCA4000B1D982 /* 3f.jpg in Resources */,
 				DA28B7D0171FCA4000B1D982 /* 4f.jpg in Resources */,
 				DA28B7D1171FCA4000B1D982 /* 1.jpg in Resources */,
@@ -354,12 +363,13 @@
 		DA28B79B171FA45700B1D982 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ThumbnailFocus/ThumbnailFocus-Prefix.pch";
 				INFOPLIST_FILE = "ThumbnailFocus/ThumbnailFocus-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -367,12 +377,13 @@
 		DA28B79C171FA45700B1D982 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ThumbnailFocus/ThumbnailFocus-Prefix.pch";
 				INFOPLIST_FILE = "ThumbnailFocus/ThumbnailFocus-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
