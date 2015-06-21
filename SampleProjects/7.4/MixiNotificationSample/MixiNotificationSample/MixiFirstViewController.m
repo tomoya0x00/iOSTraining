@@ -29,6 +29,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UIMutableUserNotificationAction *climateOnAction =
+        [[UIMutableUserNotificationAction alloc] init];
+    
+    climateOnAction.identifier = @"CLIMATE_ON_IDENTIFIER";
+    climateOnAction.title = @"On Climate";
+    climateOnAction.activationMode = UIUserNotificationActivationModeBackground;
+    climateOnAction.destructive = NO;
+    climateOnAction.authenticationRequired = NO;
+    
+    UIMutableUserNotificationCategory *climateOnCategory =
+        [[UIMutableUserNotificationCategory alloc] init];
+    
+    climateOnCategory.identifier = @"CLIMATE_ON_CATEGORY";
+    [climateOnCategory setActions:@[climateOnAction] forContext:UIUserNotificationActionContextDefault];
+    
+    NSSet *categories = [NSSet setWithObject:climateOnCategory];
+    
+    UIUserNotificationType types = UIUserNotificationTypeBadge|UIUserNotificationTypeAlert|UIUserNotificationTypeSound;
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types
+                                                                            categories:categories];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,8 +61,16 @@
 
 - (IBAction)pressPostNotification:(id)sender
 {
-    NSDictionary *dict = @{@"key":@"value"};
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"notificationName" object:self userInfo:dict];
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+
+    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    notification.alertTitle = @"Test test";
+    notification.alertBody = @"This is local notification1\nThis is local notification2\nThis is local notification3\nThis is local notification4\nThis is local notification5";
+    notification.applicationIconBadgeNumber = 3;
+    notification.userInfo = @{@"key":@"value"};
+    notification.category = @"CLIMATE_ON_CATEGORY";
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 @end
 
